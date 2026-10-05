@@ -1,0 +1,8 @@
+---
+# handlers file for lamp
+- name: Restart service nginx, in all cases
+  ansible.builtin.service:
+    name: nginx
+    state: restarted
+    notify:
+      - Restart service
